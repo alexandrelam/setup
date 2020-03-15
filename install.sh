@@ -8,6 +8,7 @@ echo "sublimetext"
 echo "install pip for python"
 echo "uninstall python2 make python 3 default"
 echo "install git"
+echo "uninstall firefox"
 echo ""
 echo ""
 echo ""
@@ -53,6 +54,10 @@ sudo update-alternatives  --set python /usr/bin/python3.6
 #install git
 sudo apt -y install git
 
+#uninstall firefox
+sudo apt -y remove firefox
+sudo apt -y autoremove
+
 echo "This script will install the following :"
 echo "Update and upgrade"
 echo "Google Chrome"
@@ -64,3 +69,4 @@ echo "sublimetext"
 echo "install pip for python"
 echo "uninstall python2 make python 3 default"
 echo "install git"
+echo "uninstall firefox"

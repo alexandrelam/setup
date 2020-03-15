@@ -1,4 +1,4 @@
-# Setup Ubuntu 
+# Setup Ubuntu
 
 ### Prérequis
 
@@ -19,3 +19,4 @@ Executer le fichier : `./install.sh`
 * Install Pip for python
 * Uninstall python2 make python 3 default
 * Install GIT
+* Uninstall firefox
