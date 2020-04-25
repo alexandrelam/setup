@@ -39,15 +39,3 @@ sudo apt -y install git
 #uninstall firefox
 sudo apt -y remove firefox
 sudo apt -y autoremove
-
-echo "This script will install the following :"
-echo "Update and upgrade"
-echo "Google Chrome"
-echo "flatpak"
-echo "Discord"
-echo "Youtube-DL"
-echo "Mpv"
-echo "sublimetext"
-echo "install pip for python"
-echo "install git"
-echo "uninstall firefox"
