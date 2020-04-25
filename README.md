@@ -2,7 +2,7 @@
 
 ### Prérequis
 
-Ce script fonctionne sur **Ubuntu 18.04 et supérieur.**
+Ce script fonctionne sur **Ubuntu 20.04**
 
 ### Installation
 
@@ -16,7 +16,7 @@ Executer le fichier : `./install.sh`
 * Youtube-DL
 * Mpv
 * SublimeText
+* Install Python
 * Install Pip for python
-* Uninstall python2 make python 3 default
 * Install GIT
 * Uninstall firefox
