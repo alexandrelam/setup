@@ -39,3 +39,10 @@ sudo apt -y install git
 #uninstall firefox
 sudo apt -y remove firefox
 sudo apt -y autoremove
+
+#use alt right click to move and resize windows
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Alt>'
+
+
+
