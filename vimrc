@@ -22,7 +22,13 @@ Plug 'vim-syntastic/syntastic'
 
 Plug 'itchyny/lightline.vim'
 
+Plug 'othree/yajs.vim'
+
+Plug 'mxw/vim-jsx'
+
 Plug 'jiangmiao/auto-pairs'
+
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Initialize plugin system
 call plug#end()
