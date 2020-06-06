@@ -4,12 +4,11 @@ set showbreak=+++
 set textwidth=100	
 set showmatch	
 set nowrap
-
+set laststatus=2
 set hlsearch	
 set smartcase	
 set ignorecase	
 set incsearch
- 
 set autoindent	
 set shiftwidth=4	
 set smartindent	
@@ -19,11 +18,11 @@ set tabstop=4
 
 call plug#begin('~/.vim/plugged')
 
+" NerdTree
+Plug 'preservim/nerdtree'
+
 " HTML CSS shortcut
 Plug 'mattn/emmet-vim'
-
-" Affiche les erreurs
-Plug 'vim-syntastic/syntastic'
 
 " Js syntax highlight
 Plug 'othree/yajs.vim'
@@ -44,9 +43,13 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Custom bar
+Plug 'itchyny/lightline.vim'
+
 " Initialize plugin system
 call plug#end()
 
+let g:lightline = {'colorscheme': "seoul256"}
 
 " Remap keys 
 nnoremap <silent> ,<space> :Files<CR>
