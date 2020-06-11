@@ -1,0 +1,276 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Combien de lignes sont enregistrées dans l'historique
+set history=500
+
+" Numérote les lignes
+set nu
+
+" Recharge le fichier si il est modifié de l'extérieur
+set autoread
+au FocusGained,BufEnter * checktime
+
+" Map de la touche leader
+let mapleader = ","
+
+" Sauvegarde rapide
+nmap <leader>w :w!<cr>
+
+" Montre la position actuelle du curseur
+set ruler
+
+" Un buffer est caché si il est abandonné
+set hid
+
+" Configure la touche supprimer correctement
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" Améliore la recherche
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+" Redessine après avoir exécuté une marcro
+set lazyredraw
+
+" Active les regular expression
+set magic
+
+" Affiche les couples de parenthèses
+set showmatch
+set mat=2
+
+" Désactive les sons d'erreur
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" Ajoute une marge de 1 à gauche
+set foldcolumn=1
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable syntax highlighting
+syntax enable
+set background=dark
+set encoding=utf8
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fichiers, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set nobackup
+set nowb
+set noswapfile
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Utiliser des espaces à la place des tabs
+set expandtab
+
+set smarttab
+
+" 1 tab=4 espaces
+set shiftwidth=4
+set tabstop=4
+
+set lbr
+set tw=500
+
+set ai 
+set si 
+set wrap 
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Déplacements
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Déplacements entre les fenêtres
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:NERDTreeWinPos = "right"
+let NERDTreeShowHidden=0
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark<Space>
+map <leader>nf :NERDTreeFind<cr>
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => lightline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ ['mode', 'paste'],
+      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*FugitiveHead")?FugitiveHead():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
+      \ },
+      \ 'separator': { 'left': ' ', 'right': ' ' },
+      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \ }
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fzf
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <silent> <C-f> :Files<CR>
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Coc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Voici les plugins COC à installer : 
+" :CocInstall coc-python coc-tsserver coc-json coc-html coc-css coc-java
+
+" Pour vérifier l'install : 
+" :checkhealth
+
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim Plug
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+call plug#begin('~/.vim/plugged')
+
+" NerdTree
+Plug 'preservim/nerdtree'
+
+" HTML CSS shortcut
+Plug 'mattn/emmet-vim'
+
+" Syntastic pour les vérifications d'erreurs 
+Plug 'vim-syntastic/syntastic'
+
+" Js syntax highlight
+Plug 'othree/yajs.vim'
+
+" Jsx syntax highlight
+Plug 'mxw/vim-jsx'
+
+" Fuzzyfind file
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" Autopair for parenthesis
+Plug 'jiangmiao/auto-pairs'
+
+" HTML, CSS, JS prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+" Intellisense
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Custom bar
+Plug 'itchyny/lightline.vim'
+
+" Initialize plugin system
+call plug#end()
