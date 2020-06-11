@@ -61,10 +61,10 @@ set foldcolumn=1
 
 " Enable syntax highlighting
 syntax enable
-set background=dark
 set encoding=utf8
 
-
+colorscheme gruvbox
+set bg=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fichiers, backups and undo
