@@ -14,7 +14,9 @@ Copier le contenu du .vimrc dans votre .vimrc
 ### Copie du .vimrc
 
 `cd`
+
 `git clone https://github.com/alexandrelam/setup`
+
 `cp setup/.vimrc .vimrc`
 
 ### Installation des plugins
