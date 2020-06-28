@@ -1,4 +1,6 @@
 #!/bin/bash
+cd 
+
 sudo apt update
 sudo apt -y upgrade
 
@@ -36,13 +38,31 @@ sudo apt -y install python3-pip
 #install git
 sudo apt -y install git
 
+#install vim
+sudo apt -y install vim
+
 #uninstall firefox
 sudo apt -y remove firefox
 sudo apt -y autoremove
 
+#install curl
+sudo apt -y install curl 
+
+#install node and npm
+sudo apt -y install nodejs
+sudo apt -y install npm
+
+#install obs studio pour record
+sudo add-apt-repository -y ppa:obsproject/obs-studio && sudo apt install -y ffmpeg obs-studio
+
+#install vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+#install gruvbox theme
+git clone https://github.com/morhetz/gruvbox
+cp gruvbox/colors .vim/
+
 #use alt right click to move and resize windows
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Alt>'
-
-
-

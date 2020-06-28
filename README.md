@@ -48,7 +48,13 @@ Executer le fichier : `./install.sh`
 * Install Python
 * Install Pip for python
 * Install GIT
+* Install VIM
 * Uninstall firefox
+* Install Curl
+* Install Nodejs et npm
+* Install OBS Studio
+* Install vimplug
+* Install Gruvbox theme for vim
 
 ### Settings
 * Utiliser alt+right-click pour bouger et resize une fenêtre
