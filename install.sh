@@ -1,5 +1,5 @@
 #!/bin/bash
-cd 
+cd
 
 sudo apt update
 sudo apt -y upgrade
@@ -16,11 +16,6 @@ sudo chmod a+x /usr/local/bin/youtube-dl
 hash -r
 sudo youtube-dl -U
 
-#install mpv
-sudo add-apt-repository -y ppa:mc3man/mpv-tests
-sudo apt -y install mpv
-
-
 #install sublime text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt -y install apt-transport-https
@@ -29,7 +24,7 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt -y update
 sudo apt -y install sublime-text
 
-#install python 
+#install python
 sudo apt -y install python3
 
 #install pip
@@ -46,7 +41,7 @@ sudo apt -y remove firefox
 sudo apt -y autoremove
 
 #install curl
-sudo apt -y install curl 
+sudo apt -y install curl
 
 #install node and npm
 sudo apt -y install nodejs
@@ -60,8 +55,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 #install gruvbox theme
+cd
 git clone https://github.com/morhetz/gruvbox
 cp gruvbox/colors .vim/
+
+#vimplug and coc
+vim -c ":PlugInstall" -c wq
+vim -c ":CocInstall coc-python coc-tsserver coc-json coc-html coc-css coc-java" -c wq
 
 #use alt right click to move and resize windows
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
