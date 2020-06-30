@@ -42,7 +42,6 @@ Executer le fichier : `./install.sh`
 ### Logiciels installés
 
 * Google-Chrome
-* Youtube-DL
 * SublimeText
 * Install Python
 * Install Pip for python
