@@ -48,8 +48,7 @@ Executer le fichier : `./install.sh`
 * Install Pip for python
 * Install GIT
 * Install VIM
-* Install Gruvbox theme for vim
-* Installation automatique des plugins et coc
+* Download Gruvbox theme but no install
 * Uninstall firefox
 * Install Curl
 * Install Nodejs et npm

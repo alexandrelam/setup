@@ -57,11 +57,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 #install gruvbox theme
 cd
 git clone https://github.com/morhetz/gruvbox
-cp gruvbox/colors .vim/
-
-#vimplug and coc
-vim -c ":PlugInstall" -c wq
-vim -c ":CocInstall coc-python coc-tsserver coc-json coc-html coc-css coc-java" -c wq
 
 #use alt right click to move and resize windows
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
