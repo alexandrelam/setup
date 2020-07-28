@@ -34,11 +34,10 @@ Dans vim : `:PlugInstall`
 
 ## Vim raccourci
 
-leader n n    :   nerdtree
-
-ctrl y ,      :   emmet auto complete for html tags
-
-ctrl f        :   fzf find files in dir
+| , n n     | toggle nerdtree              |  
+|-----------|------------------------------|
+| ctrl y ,  | emmet autocomplete html tags | 
+| ctrl f    | fzf find file in dir         |
 
 # Setup Ubuntu
 
