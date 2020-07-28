@@ -32,6 +32,12 @@ Dans vim : `:PlugInstall`
 
 `:CocInstall coc-python coc-tsserver coc-json coc-html coc-css coc-java`
 
+## Vim raccourci
+
+leader n n    :   nerdtree
+ctrl y ,      :   emmet auto complete for html tags
+ctrl f        :   fzf find files in dir
+
 # Setup Ubuntu
 
 ### Prérequis
