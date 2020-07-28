@@ -35,7 +35,9 @@ Dans vim : `:PlugInstall`
 ## Vim raccourci
 
 leader n n    :   nerdtree
+
 ctrl y ,      :   emmet auto complete for html tags
+
 ctrl f        :   fzf find files in dir
 
 # Setup Ubuntu
