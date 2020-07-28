@@ -34,10 +34,9 @@ Dans vim : `:PlugInstall`
 
 ## Vim raccourci
 
-| , n n     | toggle nerdtree              |  
-|-----------|------------------------------|
-| ctrl y ,  | emmet autocomplete html tags | 
+| ctrl y ,  | emmet autocomplete html tags |   
 | ctrl f    | fzf find file in dir         |
+| , n n     | toggle nerdtree              |
 
 # Setup Ubuntu
 
