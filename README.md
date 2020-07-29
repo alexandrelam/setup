@@ -36,7 +36,7 @@ Dans vim : `:PlugInstall`
 
 | raccourci | action                       |
 |-----------|------------------------------|
-| ctrl y ,  | emmet autocomplete html tags |   
+| , ,       | emmet autocomplete html tags |   
 | ctrl f    | fzf find file in dir         |
 | , n n     | toggle nerdtree              |
 
