@@ -44,14 +44,6 @@ sudo apt -y install npm
 #install obs studio pour record
 sudo add-apt-repository -y ppa:obsproject/obs-studio && sudo apt install -y ffmpeg obs-studio
 
-#install vim plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-#install gruvbox theme
-cd
-git clone https://github.com/morhetz/gruvbox
-
 #use alt right click to move and resize windows
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Alt>'
