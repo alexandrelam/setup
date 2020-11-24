@@ -47,3 +47,9 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio && sudo apt install -y ffmp
 #use alt right click to move and resize windows
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Alt>'
+
+# fix alt tab on gnome
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt><Shift>Tab', '<Super><Shift>Tab']"
