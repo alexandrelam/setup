@@ -19,7 +19,6 @@ Copier le contenu du .vimrc dans votre .vimrc
 
 ### Installation du theme gruvbox
 
-
 `git clone https://github.com/morhetz/gruvbox`
 
 `cp gruvbox/colors .vim`
@@ -35,8 +34,8 @@ Dans vim : `:PlugInstall`
 ## Vim raccourci
 
 | raccourci | action                       |
-|-----------|------------------------------|
-| , ,       | emmet autocomplete html tags |   
+| --------- | ---------------------------- |
+| , ,       | emmet autocomplete html tags |
 | ctrl f    | fzf find file in dir         |
 | , n n     | toggle nerdtree              |
 
@@ -54,24 +53,38 @@ Executer le fichier : `./install.sh`
 
 ### Logiciels installés
 
-* Google-Chrome
-* SublimeText
-* Install Python
-* Install Pip for python
-* Install GIT
-* Install VIM
-* Download Gruvbox theme but no install
-* Uninstall firefox
-* Install Curl
-* Install Nodejs et npm
-* Install OBS Studio
-* Install vimplug
+- Google-Chrome
+- SublimeText
+- Install Python
+- Install Pip for python
+- Install GIT
+- Install VIM
+- Download Gruvbox theme but no install
+- Uninstall firefox
+- Install Curl
+- Install Nodejs et npm
+- Install OBS Studio
+- Install vimplug
 
+## Settings
 
-### Settings
-* Utiliser alt+right-click pour bouger et resize une fenêtre
+#### Alt right click resize
 
-## Imwheel
+```
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Alt>'
+```
+
+#### Fix alt-tab on gnome
+
+```
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt><Shift>Tab', '<Super><Shift>Tab']"
+```
+
+#### Imwheel
 
 1. `sudo apt install imwheel`
 2. Download `mousewheel.sh`
