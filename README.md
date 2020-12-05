@@ -70,3 +70,11 @@ Executer le fichier : `./install.sh`
 
 ### Settings
 * Utiliser alt+right-click pour bouger et resize une fenêtre
+
+## Imwheel
+
+1. `sudo apt install imwheel`
+2. Download `mousewheel.sh`
+3. `chmod +x mousewheel.sh`
+4. `./mousewheel.sh`
+5. Add `mousewheel.sh` to startup
