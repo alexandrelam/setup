@@ -91,3 +91,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt>
 3. `chmod +x mousewheel.sh`
 4. `./mousewheel.sh`
 5. Add `mousewheel.sh` to startup
+
+## Cool website 
+
+- Free illustration for app : https://2.flexiple.com/scale/all-illustrations
