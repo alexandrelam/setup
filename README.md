@@ -96,3 +96,4 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt>
 
 - Free illustration for app : https://2.flexiple.com/scale/all-illustrations
 - List of illustrations :https://dev.to/davidepacilio/50-free-tools-and-resources-to-create-awesome-user-interfaces-1c1b
+- Another list of illustration websites : https://dev.to/theme_selection/best-design-resources-websites-every-developer-should-bookmark-1p5d
