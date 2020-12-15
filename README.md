@@ -92,6 +92,10 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt>
 4. `./mousewheel.sh`
 5. Add `mousewheel.sh` to startup
 
+## Sur windows10
+
+Alt-Resize window : https://stefansundin.github.io/altdrag/
+
 ## Cool website 
 
 - Free illustration for app : https://2.flexiple.com/scale/all-illustrations
