@@ -39,7 +39,7 @@ Dans vim : `:PlugInstall`
 | ctrl f    | fzf find file in dir         |
 | , n n     | toggle nerdtree              |
 
-# Setup Ubuntu
+## Setup Ubuntu
 
 ### Prérequis
 
@@ -91,6 +91,13 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt>
 3. `chmod +x mousewheel.sh`
 4. `./mousewheel.sh`
 5. Add `mousewheel.sh` to startup
+
+## Setup Arch Nvidia driver hybrid
+
+https://www.youtube.com/watch?v=OlIXQRpfJQ4
+
+install `optimus-manager-qt` and `bbswitch`
+
 
 ## Sur windows10
 
