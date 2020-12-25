@@ -15,13 +15,13 @@ Copier le contenu du .vimrc dans votre .vimrc
 
 `git clone https://github.com/alexandrelam/setup`
 
-`cp setup/.vimrc .vimrc`
+`sudo cp -r setup/.vimrc .vimrc`
 
 ### Installation du theme gruvbox
 
 `git clone https://github.com/morhetz/gruvbox`
 
-`cp gruvbox/colors .vim`
+`sudo cp -r gruvbox/colors .vim`
 
 ### Installation des plugins
 
