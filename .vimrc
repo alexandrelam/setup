@@ -170,7 +170,7 @@ let g:lightline = {
 " => Fzf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-p> :Files<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -185,7 +185,7 @@ let g:user_emmet_leader_key=','
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Voici les plugins COC à installer : 
-" :CocInstall coc-python coc-tsserver coc-json coc-html coc-css coc-java
+" :CocInstall coc-tsserver coc-json coc-html coc-css coc-vetur 
 
 " Pour vérifier l'install : 
 " :checkhealth

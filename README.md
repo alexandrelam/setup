@@ -7,8 +7,8 @@ Copier le contenu du .vimrc dans votre .vimrc
 ### Installation de Vim-Plug
 
 ```
- ~/.vim/autoload/plug.vim --create-dirs \
-     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ### Copie du .vimrc
@@ -29,7 +29,15 @@ Dans vim : `:PlugInstall`
 
 #### Installation de Coc
 
-`:CocInstall coc-python coc-tsserver coc-json coc-html coc-css coc-java`
+python
+`:CocInstall coc-python`
+
+java
+`:CocInstall coc-java`
+
+web dev
+`:CocInstall coc-tsserver coc-json coc-html coc-css coc-vetur`
+
 
 ## Vim raccourci
 
