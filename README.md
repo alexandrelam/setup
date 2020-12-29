@@ -30,13 +30,13 @@ Dans vim : `:PlugInstall`
 #### Installation de Coc
 
 python
-`:CocInstall coc-python`
+`:CocInstall coc-python coc-git`
 
 java
-`:CocInstall coc-java`
+`:CocInstall coc-java coc-git`
 
 web dev
-`:CocInstall coc-tsserver coc-json coc-html coc-css coc-vetur`
+`:CocInstall coc-tsserver coc-json coc-html coc-css coc-vetur coc-git`
 
 
 ## Vim raccourci
