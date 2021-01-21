@@ -285,9 +285,6 @@ Plug 'junegunn/fzf.vim'
 " Autopair for parenthesis
 Plug 'jiangmiao/auto-pairs'
 
-" HTML, CSS, JS prettier
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
