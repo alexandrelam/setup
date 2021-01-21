@@ -38,6 +38,9 @@ java
 web dev
 `:CocInstall coc-tsserver coc-json coc-html coc-css coc-vetur coc-git`
 
+all
+`:CocInstall coc-tsserver coc-json coc-html coc-css coc-vetur coc-git coc-java coc-python coc-prettier`
+
 
 ## Vim raccourci
 
