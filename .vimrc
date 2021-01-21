@@ -7,7 +7,7 @@
 " Text, tab and indent related
 " Déplacements
 " Nerd Tree
-" lightline
+" Airline
 " Fzf
 " Coc
 " vim plug
@@ -124,6 +124,11 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Déplacements entre les buffers 
+map gk :bn<cr>
+map gj :bp<cr>
+map gd :bd<cr>  
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -141,30 +146,10 @@ map <leader>nf :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => lightline
+" => airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set laststatus=2
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ ['mode', 'paste'],
-      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-      \   'right': [ [ 'lineinfo' ], ['percent'] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*FugitiveHead")?FugitiveHead():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
-      \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': ' ', 'right': ' ' }
-      \ }
+let g:airline#extensions#tabline#enabled = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fzf
@@ -288,8 +273,8 @@ Plug 'jiangmiao/auto-pairs'
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Custom bar
-Plug 'itchyny/lightline.vim'
+" Custom bar + tab
+Plug 'vim-airline/vim-airline'
 
 " Initialize plugin system
 call plug#end()
